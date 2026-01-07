@@ -20,5 +20,5 @@ class ExpertMatch(BaseModel):
 class ExpertListResponse(BaseModel):
     recommendations: List[ExpertMatch]
     total_found: int
-    isGeneralCategory: bool
+    isGeneralCategory: Optional[bool] = None  # <-- Optional + default None
     message: str
